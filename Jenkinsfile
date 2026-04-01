@@ -9,7 +9,10 @@ pipeline {
         }
         stage('Build') {
             agent {
-                docker { image 'gcc:12' }
+                docker { 
+                    image 'gcc:12' 
+                    args '-u root'
+                }
             }
             steps {
                 sh 'apt-get update && apt-get install -y cmake'
