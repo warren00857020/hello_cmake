@@ -1,3 +1,0 @@
-C:/dev/hello_cmake/build/CMakeFiles/hello.dir
-C:/dev/hello_cmake/build/CMakeFiles/edit_cache.dir
-C:/dev/hello_cmake/build/CMakeFiles/rebuild_cache.dir
