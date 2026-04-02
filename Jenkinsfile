@@ -7,7 +7,7 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Build') {
+        stage('Build and Run') {
             agent {
                 docker { 
                     image 'gcc:12' 
@@ -18,10 +18,6 @@ pipeline {
                 sh 'apt-get update && apt-get install -y cmake'
                 sh 'cmake -B build'
                 sh 'cmake --build build'
-            }
-        }
-        stage('Run') {
-            steps {
                 sh './build/hello'
             }
         }
